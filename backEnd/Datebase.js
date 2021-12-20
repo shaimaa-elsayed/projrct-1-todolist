@@ -1,16 +1,16 @@
 const mongoose   =  require("mongoose")
-const DatebaseURI = "mongodb://localhost:27017/todolistv01" 
+const DatebaseURI = "mongodb://localhost:27017/Todolistv01" 
  mongoose.connect(DatebaseURI)
 
 const Datebase= mongoose.connection;
 
 
-Datebase.on("connected",(error)=>{
+Datebase.on("connected",(err)=>{
 
     console.log("CONNECTED URI");
 });
 
-Datebase.on("error",(error)=>{
+Datebase.on("error",(err)=>{
 
     console.log("ERROR IN MONGO ");
 
